@@ -1,0 +1,114 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #FFFBD8; /* default light background */
+    color: #333;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #222; /* default dark footer */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.background-light {
+    background-color: #FFEC9E; /* default light section background */
+}
+
+.background-dark {
+    background-color: #637A9F; /* default dark section background */
+}
+
+.text-block {
+    background: rgba(255, 255, 255, 0.8);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Daytime palette */
+.day .header,
+.day .background-light {
+    background-color: #FFFBD8;
+}
+
+.day .background-dark,
+.day footer {
+    background-color: #ED9455;
+}
+
+.day nav ul li a {
+    color: #FFBB70;
+}
+
+/* Nighttime palette */
+.night .header,
+.night .background-light {
+    background-color: #E8C872;
+}
+
+.night .background-dark,
+.night footer {
+    background-color: #637A9F;
+}
+
+.night nav ul li a {
+    color: #C9D7DD;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
