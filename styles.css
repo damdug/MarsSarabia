@@ -1,10 +1,9 @@
-/* Basic reset */
+/* Basic reset and typography */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Open Sans', Arial, sans-serif;
     background-color: #f4f4f4;
@@ -12,37 +11,29 @@ body {
     line-height: 1.6;
 }
 
+/* Header, nav and footer styles */
 header {
-    background: #FFFBD8; /* default light background */
+    background: #FFFBD8;
     color: #333;
     padding: 1rem 0;
     text-align: center;
 }
-
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
-
 nav ul li {
     display: inline;
     margin-right: 20px;
 }
-
 nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
     font-size: 1.2rem;
 }
-
-section {
-    padding: 0px;
-    margin: 0px 0;
-}
-
 footer {
-    background-color: #222; /* default dark footer */
+    background-color: #222;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -51,20 +42,18 @@ footer {
     width: 100%;
 }
 
+/* Container and responsive grid */
 .container {
     width: 80%;
+    max-width: 1200px;
     margin: auto;
-    overflow: hidden;
+    overflow: hidden; /* Consider if necessary */
+    text-align: center;
 }
 
-.background-light {
-    background-color: #FFEC9E; /* default light section background */
-}
-
-.background-dark {
-    background-color: #637A9F; /* default dark section background */
-}
-
+/* Utility classes for background and text */
+.background-light { background-color: #FFEC9E; }
+.background-dark { background-color: #637A9F; }
 .text-block {
     background: rgba(255, 255, 255, 0.8);
     margin: 20px;
@@ -72,44 +61,33 @@ footer {
     border-radius: 8px;
 }
 
-/* Daytime palette */
-.day .header,
-.day .background-light {
-    background-color: #FFFBD8;
-}
-
-.day .background-dark,
-.day footer {
-    background-color: #ED9455;
-}
-
-.day nav ul li a {
-    color: #FFBB70;
-}
-
-/* Nighttime palette */
-.night .header,
-.night .background-light {
-    background-color: #E8C872;
-}
-
-.night .background-dark,
-.night footer {
-    background-color: #637A9F;
-}
-
-.night nav ul li a {
-    color: #C9D7DD;
-}
+/* Theme variations */
+.day .header, .day .background-light { background-color: #FFFBD8; }
+.day .background-dark, .day footer { background-color: #ED9455; }
+.day nav ul li a { color: #FFBB70; }
+.night .header, .night .background-light { background-color: #E8C872; }
+.night .background-dark, .night footer { background-color: #637A9F; }
+.night nav ul li a { color: #C9D7DD; }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    nav ul {
-        text-align: center;
-    }
+    nav ul { text-align: center; }
     nav ul li {
         display: block;
         margin-bottom: 10px;
     }
+    footer { position: static; padding-bottom: 50px; } /* Adjust footer positioning */
 }
 
+/* Home section specific styles */
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+.home-image {
+    max-width: 100%;
+    height: auto;
+}
