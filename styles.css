@@ -1,3 +1,6 @@
+/* Import External Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&family=Zeyada&display=swap');
+
 /* Basic Reset and Global Styles */
 * {
     margin: 0;
@@ -42,25 +45,35 @@ html, body {
 }
 
 /* Layout and Navigation */
-header, footer {
+header {
     text-align: center;
     padding: 20px 0;
-}
-.nav, .header-content h1, .header-content p, nav ul {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.header-content {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 .header-content h1 {
+    font-family: 'Ms Madi', cursive; /* Applying Ms Madi font */
     margin-bottom: 5px;
+    font-size: 2.5rem; /* Ensuring H1 is noticeably larger */
 }
 .header-content p {
     font-weight: 300;
     font-size: 1.2rem;
 }
+
+/* Navigation Styles */
 nav ul {
     list-style: none;
-    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 nav ul li {
     margin: 0 20px;
@@ -68,12 +81,12 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     font-size: 1.1rem;
+    color: inherit; /* Inherit the color from parent for theme consistency */
 }
 
 /* Section and Content Styles */
 .section-bg {
     position: relative;
-    width: 100%;
     min-height: 500px;
     display: flex;
     align-items: center;
@@ -100,7 +113,8 @@ nav ul li a {
 .contact-img {
     display: block;
     max-width: 100%;
-    height: auto;
+    max-height: 400px;
+    width: auto;
     margin: 0 auto;
     border: 5px solid #fff;
     border-radius: 10px;
@@ -111,19 +125,13 @@ nav ul li a {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 .text-block {
     margin-bottom: 20px;
 }
 .text-block h2 {
     font-size: 2rem;
-    color: inherit;
-}
-.text-block p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: inherit;
+    color: inherit; /* Ensures that color transitions are applied */
 }
 
 /* Responsive Design */
