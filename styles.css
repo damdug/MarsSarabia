@@ -108,6 +108,7 @@ nav ul li a {
 h2 {
     font-family: 'Zeyada', cursive;
     font-size: 4.5rem; /* Slightly larger text for headings */
+    color:goldenrod
 }
 
 /* Footer Styles */
